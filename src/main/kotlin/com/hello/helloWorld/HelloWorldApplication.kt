@@ -1,14 +1,11 @@
 package com.hello.helloWorld
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.boot.runApplication
 
 @SpringBootApplication
-@RestController
 class HelloWorldApplication
 
-@GetMapping("/welcome")
-fun welcome(): String {
-    return "Welcome to project"
+fun main(args: Array<String>) {
+    runApplication<HelloWorldApplication>(*args)
 }
